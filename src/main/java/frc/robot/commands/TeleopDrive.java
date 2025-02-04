@@ -8,7 +8,7 @@ import frc.robot.RobotContainer;
 import frc.robot.subsystems.DriveBase;
 import edu.wpi.first.wpilibj2.command.Command;
 
-import frc.robot.subsystems.Vision;
+// import frc.robot.subsystems.Vision;
 import edu.wpi.first.apriltag.AprilTagFieldLayout;
 import edu.wpi.first.apriltag.AprilTagFields;
 
@@ -27,7 +27,7 @@ public class TeleopDrive extends Command {
 
   private final DriveBase m_driveBase;
   // private final Elevator m_elevator;
-  private final Vision m_vision;
+  // private final Vision m_vision;
   AprilTagFieldLayout aprilTagFieldLayout = AprilTagFields.k2024Crescendo.loadAprilTagLayoutField();
 
   
@@ -44,9 +44,9 @@ public class TeleopDrive extends Command {
 
   double manipulatorPosition = 0;
 
-  public TeleopDrive(DriveBase driveBase, Vision vision) {
+  public TeleopDrive(DriveBase driveBase) {
     m_driveBase = driveBase;
-    m_vision = vision;
+    // m_vision = vision;
   }
 
   @Override

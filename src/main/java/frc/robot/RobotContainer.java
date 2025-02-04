@@ -17,12 +17,12 @@ import edu.wpi.first.wpilibj2.command.Subsystem;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.Constants.OperatorConstants;
-import frc.robot.commands.AutonLoader;
+// import frc.robot.commands.AutonLoader;
 import frc.robot.commands.TeleopDrive;
-import frc.robot.subsystems.Bezier;
+// import frc.robot.subsystems.Bezier;
 import frc.robot.subsystems.DriveBase;
 import frc.robot.subsystems.Kinematics;
-import frc.robot.subsystems.Vision;
+// import frc.robot.subsystems.Vision;
 
 
 /**
@@ -40,12 +40,12 @@ public class RobotContainer {
   public static Kinematics kinematics = new Kinematics(pigeon);
   public static DriveBase driveBase = new DriveBase(kinematics, pigeon);
   // public static Elevator elevator = new Elevator();
-  public static Bezier bezier = new Bezier();
+  // public static Bezier bezier = new Bezier();
 
-  public static final Vision vision = new Vision();
+  // public static final Vision vision = new Vision();
 
-  public static AutonLoader autonLoader = new AutonLoader(driveBase, vision); //NEEDED SUBSYSTEMS FOR AUTON, ELEVATOR NOT USED
-  public static TeleopDrive teleopDrive = new TeleopDrive(driveBase, vision); //ALL SUBSYSTEMS
+  // public static AutonLoader autonLoader = new AutonLoader(driveBase, vision); //NEEDED SUBSYSTEMS FOR AUTON, ELEVATOR NOT USED
+  // public static TeleopDrive teleopDrive = new TeleopDrive(driveBase, vision); //ALL SUBSYSTEMS
 
   public final static CommandXboxController m_driverController = new CommandXboxController(OperatorConstants.kDriverPort);
   public final static CommandXboxController m_manipulatorController = new CommandXboxController(OperatorConstants.kManipulatorPort);
@@ -316,13 +316,13 @@ public class RobotContainer {
    *
    * @return the command to run in autonomous
    */
-  public Command getAutonomousCommand() {
-    return autonLoader.getAuton();
-  }
+  // public Command getAutonomousCommand() {
+  //   return autonLoader.getAuton();
+  // }
 
-  public void runTeleopCommand() {
-    teleopDrive.schedule();
-  }
+  // public void runTeleopCommand() {
+  //   teleopDrive.schedule();
+  // }
 
   public static double findClockTime(double seconds) {
     double clocktime = (seconds/0.02);
