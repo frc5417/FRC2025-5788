@@ -40,30 +40,6 @@ public final class Constants {
     public static final boolean[] invertedMotors = {true, true, false, false};
 
   }
-
-  public static class ManipulatorConstants {
-    public static final int elevatorMaster = 61;
-    public static final int elevatorSlave = 62;
-    public static final int intake = 51;
-    public static final int shooterMaster = 52;
-    public static final int shooterSlave = 53;
-    public static final int shooterIntake = 54;
-    public static final int wrist = 55;
-    public static final double kP = 0;
-    public static final double kI = 0;
-    public static final double kD = 0;
-    public static final double wristTolerance = 0.02;
-    public static final double shooterNominalAngle = 67;
-    public static final double intakeCurrentLimit = 7;
-  }
-
-  public static class Wrist {
-    public static final double flatWristPos = 0.18069375;
-    public static final double shoot_from_subwoofer = 0.04958;
-    public static final double handoff = 0.0421;
-    public static final double amp = 0.02;
-    public static final double passing = 0.049;
-  }
   
   public static class Swerve {
     public static final Double angularPercentage = -0.7;
@@ -78,13 +54,45 @@ public final class Constants {
     public static final boolean blueFlipState = false;
   }
 
-  public static class DriveBaseConstants {
-    public static final double driveBaseRadius = (Double) 0.51 * Math.sqrt(2); 
+  public static class ElevatorConstants {
+    public static final int leftSparkMax = 61;
+    public static final int leftCurrentLimit = 40;
+    public static final boolean leftInverted = false;
+    public static final double leftKP = 2.0;
+    public static final double leftKI = 0.0;
+    public static final double leftKD = 0.0;
+
+    public static final int rightSparkMax = 62;
+    public static final int rightCurrentLimit = 40;
+    public static final boolean rightInverted = false;
+    public static final double rightKP = 2.0;
+    public static final double rightKI = 0.0;
+    public static final double rightKD = 0.0;
   }
 
-  public static class SampleConstants {
-    public static final int sampleNeo = 15;
-    public static final int sampleFlex = 59;
+  public static class IntakeConstants {
+    public static final int wristSparkMax = 58;
+    public static final int wristCurrentLimit = 40;
+    public static final boolean wristInverted = false;
+    public static final double wristKP = 2.0;
+    public static final double wristKI = 0.0;
+    public static final double wristKD = 0.0;
+
+    public static final int spinnerSparkMax = 59;
+    public static final int spinnerCurrentLimit = 40;
+    public static final boolean spinnerInverted = false;
+  }
+
+  public static class PassageConstants {
+    public static final int spinnerSparkMax = 60;
+    public static final int spinnerCurrentLimit = 40;
+    public static final boolean spinnerInverted = false;
+  }
+
+  public static class OuttakeConstants {
+    public static final int spinnerSparkMax = 57;
+    public static final int spinnerCurrentLimit = 40;
+    public static final boolean spinnerInverted = false;
   }
 
   public static class Auton {
@@ -138,5 +146,9 @@ public final class Constants {
 
     public static final Pose2d blueCenterNotePose = new Pose2d(3.5, 5.5, new Rotation2d());
     public static final Pose2d redCenterNotePose = new Pose2d(14.5, 5.5, Rotation2d.fromDegrees(-180));
-  } 
+  }
+
+  public static class DriveBaseConstants {
+    public static final double driveBaseRadius = (Double) 0.51 * Math.sqrt(2); 
+  }
 }
